@@ -1,7 +1,7 @@
 APP_NAME="twm-dashboard-engine-service"
 JAVA_PARAM="-Xmx256m"
 
-BIN_PATH=$TWM_HOME_PARENT/TWM/$APP_NAME/bin     #TWM-HOME-PARENT :: exported in .bashrc
+BIN_PATH=$DASHBOARD_ENGINE_J/$APP_NAME/bin     #DASHBOARD_ENGINE_J :: exported in .bashrc
 cd $BIN_PATH/../target/
 JAR_NAME=`ls *jar`
 JAR_PATH=$BIN_PATH/../target/$JAR_NAME
