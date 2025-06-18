@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: twm-dashboard-engine-service
+  datasource:
+    url: jdbc:postgresql://${CRDB_DB_HOST}:${CRDB_DB_PORT}/${CRDB_DB}
+    username: ${CRDB_USERNAME}
+  jpa:
+    database: postgresql
+
+server:
+  port: 5025
+
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 10000 #milliseconds
+        readTimeout: 10000
+
+logging:
+  level:
+    root: info
