@@ -11,6 +11,9 @@ server:
   port: 5025
 
 
+locations:
+  item-pricing: /var/item-pricing.txt
+
 feign:
   client:
     config:
