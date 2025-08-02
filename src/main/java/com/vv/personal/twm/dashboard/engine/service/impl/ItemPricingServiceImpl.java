@@ -109,14 +109,14 @@ public class ItemPricingServiceImpl implements ItemPricingService {
     int index = 0;
     List<Double> counter = new ArrayList<>();
     for (ItemPricingProto.ItemPricingRecord record : itemPricingRecords) {
-      if (lookUpIndex.containsKey(record.getCategory())) {
-        counter.set(
-            lookUpIndex.get(record.getCategory()),
-            counter.get(lookUpIndex.get(record.getCategory())) + record.getPrice());
-      } else {
+      if (!lookUpIndex.containsKey(record.getCategory())) {
         lookUpIndex.put(record.getCategory(), index++);
         counter.add(0.0);
       }
+
+      counter.set(
+          lookUpIndex.get(record.getCategory()),
+          counter.get(lookUpIndex.get(record.getCategory())) + record.getPrice());
     }
 
     // extract total spent and populate category-price map

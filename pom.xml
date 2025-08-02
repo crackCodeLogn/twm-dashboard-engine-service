@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.vv.personal</groupId>
     <artifactId>twm-dashboard-engine-service</artifactId>
-    <version>1.1.2</version>
+    <version>1.2.2</version>
     <name>twm-dashboard-engine-service</name>
     <description>TWM Dashboard engine service</description>
     <packaging>jar</packaging>
